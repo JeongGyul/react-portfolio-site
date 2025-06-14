@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './Certificate.css';
 
 function Certificate() {
     const [certi, setCerti] = useState(undefined)
@@ -15,7 +16,7 @@ function Certificate() {
     }, [])
 
     return (
-        <div>
+        <div className="certificate-container">
             <h1>자격증</h1>
             <ul>
                 {certi === undefined ? <li>로딩중...</li> : certi.map((data) => (

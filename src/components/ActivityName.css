@@ -1,0 +1,7 @@
+.activity-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 10px;
+    word-break: keep-all;
+}

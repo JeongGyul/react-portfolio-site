@@ -1,0 +1,33 @@
+.certificate-container {
+    padding: 20px;
+}
+
+.certificate-container h1 {
+    font-size: 2em;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.certificate-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.certificate-container ul li {
+    background-color: #ecf0f1;
+    margin-bottom: 12px;
+    padding: 15px 20px;
+    border-left: 5px solid #3498db;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+    font-size: 1.1em;
+    color: #34495e;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.certificate-container ul li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,42 @@
+.activities-container {
+    padding: 20px;
+}
+
+.activities-container h1 {
+    font-size: 2em;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.activities-container .simple-activities ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+.activities-container .simple-activities ul li {
+    background-color: #ecf0f1;
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    border-left: 4px solid #3498db;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    font-size: 1em;
+    color: #555;
+}
+
+.activities-container .simple-activities li {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.activities-container .simple-activities li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.activities-container .detail-activities ul {
+    list-style-type: none;
+    padding: 0;
+}

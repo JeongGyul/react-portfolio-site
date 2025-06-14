@@ -1,8 +1,9 @@
 import React from 'react';
+import './ActivityName.css';
 
 function ActivityName({name}) {
     return (
-        <div>
+        <div className="activity-name">
             <strong>{name}</strong>
         </div>
     );

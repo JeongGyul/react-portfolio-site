@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './Home.css';
 
 function Home() {
     const [techInfo, setTechInfo] = useState(undefined)
@@ -16,7 +17,7 @@ function Home() {
 
     return (
         <>
-            <div>
+            <div className="home-container">
                 <img src="assets/img/최정규_증명사진.jpg" alt="최정규 증명사진" width="15%" />
                 <h1>최정규</h1>
                 <p>
@@ -28,7 +29,7 @@ function Home() {
                     <li>email: jjascd@naver.com</li>
                     <li>Tech Stack
                         {techInfo === undefined ? <ul><li>로딩중...</li></ul> : (
-                                <ul>
+                                <ul className="tech-stack-list">
                                     <li>Language: {techInfo.Language}</li>
                                     <li>Web: {techInfo.Web}</li>
                                     <li>Database: {techInfo.Database}</li>
@@ -39,7 +40,7 @@ function Home() {
                     </li>
                 </ul>
             </div>
-            <div>
+            <div className="home-section">
                 <h1>학력</h1>
                 <ul>
                     <li>선린인터넷고등학교 멀티미디어과 2019.03 ~ 2022.02</li>

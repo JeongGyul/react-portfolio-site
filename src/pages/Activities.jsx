@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ActivityCard from '../components/ActivityCard';
+import './Activities.css';
 
 function Activities() {
     const [actSimple, setActSimple] = useState(undefined)
@@ -25,14 +26,14 @@ function Activities() {
     }, [])
 
     return (
-        <div>
+        <div className="activities-container">
             <h1>수상 및 활동</h1>
-            <ul>
+            <ul className="simple-activities">
                 {actSimple === undefined ? <li>로딩중...</li> : actSimple.map((act) => (
                     <li key={act.id}>{act.name}</li>
                 ))}
             </ul>
-            <ul>
+            <ul className="detail-activities">
                 {actDetail === undefined ? <li>로딩중...</li> : actDetail.map((act) => (
                     <ActivityCard 
                         id={act.id} 

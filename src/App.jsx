@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
 import Certificate from './pages/Certificate'
 import Activities from './pages/Activities'
+import './App.css';
 
 function App() {
 
