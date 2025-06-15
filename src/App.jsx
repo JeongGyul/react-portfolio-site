@@ -20,8 +20,8 @@ function App() {
         </nav>
       </header>
       <main>
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
+          <Routes>                                           {/* 총 3개의 페이지를 라우팅으로 구현 */}
+            <Route path="/" element={<Home />}></Route>      {/* 기본 페이지는 Home이 나오게 설정 */}
             <Route path="/certificate" element={<Certificate />}></Route>
             <Route path="/activities" element={<Activities />}></Route>
           </Routes>

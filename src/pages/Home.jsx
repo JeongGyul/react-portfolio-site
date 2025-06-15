@@ -5,13 +5,14 @@ import './Home.css';
 function Home() {
     const [techInfo, setTechInfo] = useState(undefined)
 
+    // 의존성 배열을 빈 배열로 줌으로써 컴포넌트가 처음 마운트될 때만 GET 요청을 보냄
     useEffect(() => {
         axios.get("http://localhost:3001/techStack")
             .then((data) => {
-                setTechInfo(data.data)
+                setTechInfo(data.data)  // 요청이 성공하면 data를 state 변수에 저장
             })
             .catch(() => {
-                setTechInfo(undefined)
+                setTechInfo(undefined)  // 요청이 실패하면 state 변수에 undefined 저장
             })
     }, [])
 
@@ -28,9 +29,9 @@ function Home() {
                     <li>Github: <a href="https://github.com/JeongGyul">https://github.com/JeongGyul</a></li>
                     <li>email: jjascd@naver.com</li>
                     <li>Tech Stack
-                        {techInfo === undefined ? <ul><li>로딩중...</li></ul> : (
+                        {techInfo === undefined ? <ul><li>로딩중...</li></ul> : (  // API로부터 db.json의 내용을 받지 못하면 로딩중으로 출력
                                 <ul className="tech-stack-list">
-                                    <li>Language: {techInfo.Language}</li>
+                                    <li>Language: {techInfo.Language}</li>  {/* API로부터 내용을 받으면 각 내용을 출력 */}
                                     <li>Web: {techInfo.Web}</li>
                                     <li>Database: {techInfo.Database}</li>
                                     <li>Server: {techInfo.Server}</li>
